@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+body{
+    min-height: 100vh;
+    background-color: #596275;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imagens-container{
+    display: flex;
+}
+.image-card{
+    width: 240px;
+    height: 360px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: -6px 6px 20px #00000070;
+    transition: .3s linear;
+
+}
+.image-card img{
+    width: 100%;
+}
+.image-card:not(:first-child){
+    margin-left: -50px;
+}
+.image-card:hover{
+    transform: translateY(-24px);
+}
+.image-card:hover ~ .image-card{
+    transform: translateY(60px);
+}
